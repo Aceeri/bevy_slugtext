@@ -18,7 +18,7 @@ pub fn compute_mesh_and_material(
             continue;
         };
 
-        let Ok(face) = ttf_parser::Face::parse(&font.data, 0) else {
+        let Ok(face) = ttf_parser::Face::parse(font.data.as_ref(), 0) else {
             continue;
         };
 
